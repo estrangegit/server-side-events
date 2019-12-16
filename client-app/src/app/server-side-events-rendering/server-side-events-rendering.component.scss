@@ -1,0 +1,14 @@
+#server-side-stats {
+  table tr {
+    th:first-of-type, td:first-of-type{
+      text-align: right;
+    }
+
+    th, td {
+      width: 50%;
+    }
+  }
+  div{
+    margin-top: 20px;
+  }
+}

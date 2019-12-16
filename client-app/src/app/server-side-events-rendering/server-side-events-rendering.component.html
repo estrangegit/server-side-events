@@ -1,0 +1,66 @@
+<section id="server-side-stats">
+    <div class="row justify-content-lg-center">
+      <h2>
+        System details updated using server-sent events
+      </h2>
+    </div>
+    <div class="row" *ngIf="stats">
+      <div class="offset-lg-3 col-lg-6">
+        <table class="table table-light table-striped">
+            <thead>
+              <tr>
+                  <th>Property</th>
+                  <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>Date:</td>
+                  <td *ngIf="stats.date; else elseBlock1">{{stats.date}}</td>
+                  <ng-template #elseBlock1>
+                    <td>
+                      loading...
+                    </td>
+                  </ng-template>
+              </tr>
+              <tr>
+                  <td>Hostname:</td>
+                  <td *ngIf="stats.data.hostname; else elseBlock1">{{stats.data.hostname}}</td>
+              </tr>
+              <tr>
+                  <td>Type:</td>
+                  <td *ngIf="stats.data.type; else elseBlock1">{{stats.data.type}}</td>
+              </tr>
+              <tr>
+                  <td>Platform:</td>
+                  <td *ngIf="stats.data.platform; else elseBlock1">{{stats.data.platform}}</td>
+              </tr>
+              <tr>
+                  <td>Arch:</td>
+                  <td *ngIf="stats.data.arch; else elseBlock1">{{stats.data.arch}}</td>
+              </tr>
+              <tr>
+                  <td>Release:</td>
+                  <td *ngIf="stats.data.release; else elseBlock1">{{stats.data.release}}</td>
+              </tr>
+              <tr>
+                  <td>Uptime:</td>
+                  <td *ngIf="stats.data.uptime; else elseBlock1">{{stats.data.uptime}}</td>
+              </tr>
+              <tr>
+                  <td>Load avg.:</td>
+                  <td *ngIf="stats.data.loadaverage; else elseBlock1">{{stats.data.loadaverage}}</td>
+              </tr>
+              <tr>
+                  <td>Total mem:</td>
+                  <td *ngIf="stats.data.totalmem; else elseBlock1">{{stats.data.totalmem}}</td>
+              </tr>
+              <tr>
+                  <td>Free mem:</td>
+                  <td *ngIf="stats.data.freemem; else elseBlock1">{{stats.data.freemem}}</td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+</section>
