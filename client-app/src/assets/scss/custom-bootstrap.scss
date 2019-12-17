@@ -1,0 +1,26 @@
+$light-blue: #eaf0fa !default;
+$intermediate-blue: #98b6e7 !default;
+$deep-blue: #1f3d7a !default;
+
+a.btn.btn-light {
+    background-color: $light-blue;
+    border-color: $light-blue;
+    color: $deep-blue;
+}
+
+a.btn.btn-light:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0;
+}
+
+a.btn.btn-light:not(:disabled):not(.disabled).active {
+    background-color: $intermediate-blue;
+    border-color: $intermediate-blue;
+}
+
+h1, h2, div, table thead, table tbody {
+    color: $deep-blue;
+}
+
+a.custom-style {
+    color: rgba($color: $intermediate-blue, $alpha: 1.0)
+}
